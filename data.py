@@ -1,7 +1,4 @@
 import pandas as pd
-from numpy.ma.core import append
-
-
 class Player:
     def __init__(self, name:str, position:str, age:int, team:str, stats:dict[str,float]):
         self.name = name
@@ -19,9 +16,9 @@ class Player:
                 self.stats,
             )
 
-read_data = pd.read_csv('NBA_stats.csv')
-data_in_dictionary = read_data.to_dict(orient="records") #all the data in a dictionary
-full_data = []
+read_data = pd.read_csv('NBA_stats.txt')
+data_in_dictionary = read_data.to_dict(orient="records")# All the data converted to a dictionary
+full_data = [] # Create an empty list to store all the data
 for player_data in data_in_dictionary:
     Name = player_data["Player"]
     Position = player_data["Pos"]
@@ -32,25 +29,3 @@ for player_data in data_in_dictionary:
 
     # Create Player object and add to list
     full_data.append(Player(Name, Position, Age, Team, Stats))
-
-
-def search_for_player():
-    inputs = input("Enter the player's full name in the order of First and Last name here:")
-    for i in range(len(full_data)):
-        if full_data[i].name.strip().lower() == inputs.strip().lower():
-            print(full_data[i])
-
-print(search_for_player())
-
-
-def player_in_same_team(team_abbr:str)-> list[Player]:
-    team_list = []
-    for i in range(len(full_data)):
-        if team_abbr == full_data[i].team:
-            team_list.append(full_data[i])
-    return team_list
-
-# print(player_in_same_team("GSW"))
-
-
-#def score_higher_than():
