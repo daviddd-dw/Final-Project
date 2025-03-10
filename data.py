@@ -10,7 +10,7 @@ class Player:
         self.stats = stats  # Dictionary of player statistics (e.g., {'PPG': 25.3, 'APG': 7.2, 'RPG': 6.1})
 
     def __repr__(self):
-        return 'Player({}, {}, {}, {},{})'.format(
+        return 'Name: {}\nPosition: {}\nAge: {}\nTeam: {}\nStats: {})'.format(
                 self.name,
                 self.position,
                 self.age,

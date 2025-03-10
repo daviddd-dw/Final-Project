@@ -11,7 +11,7 @@ def search_for_player(player_name:str)-> data.Player:
     for i in range(len(full_data)):
         if full_data[i].name.strip().lower() == player_name.strip().lower():
             the_player = full_data[i]
-            print(i)
+            # print(i)
             break
         else:
             the_player = "No player is found"
