@@ -1,4 +1,4 @@
-# Author: David Wang
+# Author: David Wang and Nicolas Yenikomshian
 
 import pandas as pd
 import data

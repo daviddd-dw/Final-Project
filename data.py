@@ -1,6 +1,6 @@
 # Create a class of players that has attribute of
 # the player's name, position, age, team and statistics.
-# Author: David Wang
+# Author: David Wang and Nicolas Yenikomshian
 class Player:
     def __init__(self, name:str, position:str, age:int, team:str, stats:dict[str,float]):
         self.name = name
